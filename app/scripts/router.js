@@ -3,14 +3,13 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 
 var Router = Backbone.Router.extend({
-  router: {
+  routes: {
     '': 'home',
     'contact': 'contact',
     'about': 'about'
   },
   home: function(){
-    var self = this;
-    self.current = 'home';
+    this.current = 'home';
   },
   about: function(){
     this.current = 'about';
@@ -21,5 +20,4 @@ var Router = Backbone.Router.extend({
 });
 
 
-console.log('new router is', new Router());
 module.exports = new Router();

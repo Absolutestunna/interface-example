@@ -7,13 +7,12 @@ require('backbone-react-component');
 
 var HeaderComponent = React.createClass({
   mixins: [Backbone.React.Component.mixin],
-
   render: function(){
     return (
       <div>
-        <button className="success">Home</button>
-        <button>About</button>
-        <button>Contact</button>
+        <button onClick={this.props.homeChange}>Home</button>
+        <button onClick={this.props.aboutChange}>About</button>
+        <button onClick={this.props.contactChange}>Contact</button>
       </div>
     );
   }

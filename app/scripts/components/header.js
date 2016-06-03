@@ -6,13 +6,12 @@ require('backbone-react-component');
 
 var HeaderComponent = React.createClass({displayName: "HeaderComponent",
   mixins: [Backbone.React.Component.mixin],
-
   render: function(){
     return (
       React.createElement("div", null, 
-        React.createElement("button", {className: "success"}, "Home"), 
-        React.createElement("button", null, "About"), 
-        React.createElement("button", null, "Contact")
+        React.createElement("button", {onClick: this.props.homeChange}, "Home"), 
+        React.createElement("button", {onClick: this.props.aboutChange}, "About"), 
+        React.createElement("button", {onClick: this.props.contactChange}, "Contact")
       )
     );
   }
